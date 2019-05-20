@@ -24,20 +24,24 @@ namespace HRHourglass
             int colSize = 4;
             int largestSum = 0;
 
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < colSize; i++)
             {
                 int temp = 0;
 
                 for (int k = 0; k < rowSize; k++)
                 {
                     int top = 0;
+                    int middle = 0;
                     int bottom = 0;
 
                     for (int j = k; j < k + 3; j++)
                     {
                         top += array[i, j];
+                        bottom += array[i + 2, j];
                     }
-                    Console.WriteLine(top);
+                    middle = array[i + 1, k + 1];
+
+                    Console.WriteLine($"{top} {middle} {bottom}");
                 }
 
             }
