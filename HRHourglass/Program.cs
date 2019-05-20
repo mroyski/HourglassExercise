@@ -26,13 +26,13 @@ namespace HRHourglass
 
             for (int i = 0; i < colSize; i++)
             {
-                int temp = 0;
 
                 for (int k = 0; k < rowSize; k++)
                 {
                     int top = 0;
                     int middle = 0;
                     int bottom = 0;
+                    int temp = 0;
 
                     for (int j = k; j < k + 3; j++)
                     {
@@ -41,7 +41,13 @@ namespace HRHourglass
                     }
                     middle = array[i + 1, k + 1];
 
-                    Console.WriteLine($"{top} {middle} {bottom}");
+                    temp = (top + middle + bottom);
+
+                    if (temp > largestSum)
+                    {
+                        largestSum = temp;
+                    }
+                    Console.WriteLine(largestSum);
                 }
 
             }
