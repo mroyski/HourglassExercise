@@ -47,10 +47,9 @@ namespace HRHourglass
                     {
                         largestSum = temp;
                     }
-                    Console.WriteLine(largestSum);
                 }
-
             }
+            Console.WriteLine(largestSum);
 
         }
     }
